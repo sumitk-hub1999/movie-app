@@ -11,14 +11,14 @@ const store=createStore(movies);
 console.log(store);
 console.log(store.getState());
 
-store.dispatch({
-  type:'ADD_MOVIES',
-  movies:[{name:'Superman'}]
-});
+// store.dispatch({
+//   type:'ADD_MOVIES',
+//   movies:[{name:'Superman'}]
+// });
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App store={store}/>
   </React.StrictMode>
 );
 
